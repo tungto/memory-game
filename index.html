@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Permanent+Marker">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-header">
+            <h1 class="title">Memory Game</h1>
+            <div class="status-panel">
+                <ul class="stars">
+                    <li>
+                        <i class="fa fa-star"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-star"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-star"></i>
+                    </li>
+                </ul>
+                <div class="move-count">
+                    <span id="moves">0</span>
+                    <span>MOVE(S)</span>
+                </div>
+                <div class="stop-watch">
+                </div>
+                <span class="restart-btn">
+                    <i class="fa fa-repeat"></i>
+                </span>
+            </div>
+        </div>
+        <div class="game-board">
+            <ul class="deck">
+                <li class="card" type="crow">
+                    <i class="fas fa-crow"></i>
+                </li>
+                <li class="card" type="crow">
+                    <i class="fas fa-crow"></i>
+                </li>
+                <li class="card" type="feather">
+                    <i class="fas fa-feather"></i>
+                </li>
+                <li class="card" type="feather">
+                    <i class="fas fa-feather"></i>
+                </li>
+                <li class="card" type="fish">
+                    <i class="fas fa-fish"></i>
+                </li>
+                <li class="card" type="fish">
+                    <i class="fas fa-fish"></i>
+                </li>
+                <li class="card" type="frog">
+                    <i class="fas fa-frog"></i>
+                </li>
+                <li class="card" type="frog">
+                    <i class="fas fa-frog"></i>
+                </li>
+                <li class="card" type="kiwi">
+                    <i class="fas fa-kiwi-bird"></i>
+                </li>
+                <li class="card" type="kiwi">
+                    <i class="fas fa-kiwi-bird"></i>
+                </li>
+                <li class="card" type="chess-knight">
+                    <i class="fas fa-chess-knight"></i>
+                </li>
+                <li class="card" type="chess-knight">
+                    <i class="fas fa-chess-knight"></i>
+                </li>
+                <li class="card" type="chess-pawn">
+                    <i class="fas fa-chess-pawn"></i>
+                </li>
+                <li class="card" type="chess-pawn">
+                    <i class="fas fa-chess-pawn"></i>
+                </li>
+                <li class="card" type="chess-king">
+                    <i class="fas fa-chess-king"></i>
+                </li>
+                <li class="card" type="chess-king">
+                    <i class="fas fa-chess-king"></i>
+                </li>
+            </ul>
+        </div>
+        <div class="overlay result">
+            <div class="popup">
+                <h2 class="congrat">
+                    Congratulations 🎉
+                </h2>
+                <a class="close">x</a>
+                <div class="content">
+                    <p>You made
+                        <span class="moves">0</span> moves
+                    </p>
+                    <p>In
+                        <span id="minutes">0</span> munites
+                    </p>
+                    <p>Rating:
+                        <span id="starts">
+                            <li>
+                                <i class="fa fa-star star-rating"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-star star-rating"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-star star-rating"></i>
+                            </li>
+                        </span>
+                    </p>
+                    <button class="play-again">Play again!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -40,8 +40,7 @@ var AppController = (function (UICtrl) {
     var Timer, stopWatch;
     var popUp = document.querySelector('.result');
     var timesHTML;
-    var playAgain = document.querySelector(".play-again")
-    var closeIcon = document.querySelector('.close');
+    
 
     var setUpEventListener = function () {
 
@@ -127,7 +126,8 @@ var AppController = (function (UICtrl) {
 
     // @description close icon on modal
     var closeModal = function () {
-
+        var playAgain = document.querySelector(".play-again")
+        var closeIcon = document.querySelector('.close');
         closeIcon.addEventListener("click", function () {
             popUp.classList.remove("show")
         });

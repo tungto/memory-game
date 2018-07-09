@@ -171,13 +171,23 @@ span {
 }
 
 .deck li.show {
+  font-size: 150%;
+}
+.container .result.show {
   visibility: visible;
   opacity: 100;
-  font-size: 150%;
 }
 .popup li {
   display: inline-block;
   color: #ffcf40;
+}
+.play-again {
+  padding: 10px;
+  background-color: orange;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* -----------animation --------------*/

@@ -8,7 +8,6 @@ var UIController = (function () {
 
     return {
 
-
         getDOMstrings: function () {
             return DOMstrings;
         },
@@ -24,13 +23,12 @@ var UIController = (function () {
                 array[randomIndex] = temporarilyValue;
             }
             return array
-        }
+        },
     }
-
-
 })();
 
 var AppController = (function (UICtrl) {
+
     var DOM = UICtrl.getDOMstrings();
     var cardList = document.querySelectorAll(DOM.card);
     stars = document.querySelectorAll('.star-rating');
@@ -42,9 +40,10 @@ var AppController = (function (UICtrl) {
     var Timer, stopWatch;
     var popUp = document.querySelector('.result');
     var timesHTML;
+    var playAgain = document.querySelector(".play-again")
+    var closeIcon = document.querySelector('.close');
 
     var setUpEventListener = function () {
-
 
         for (let i = 0; i < cards.length; i++) {
             let card = cards[i];
@@ -82,7 +81,7 @@ var AppController = (function (UICtrl) {
         }
         if (moves > 8 && moves < 12) {
 
-            console.log(stars)
+            // console.log(stars)
             stars[2].style.visibility = 'collapse'
         } else if (moves > 13) {
             stars[2].style.visibility = "collapse";
@@ -119,15 +118,13 @@ var AppController = (function (UICtrl) {
 
             //showing move, rating, time on modal
             document.querySelector(".moves").innerHTML = moves;
-            // document.querySelector("starRating").innerHTML = starRating;
             document.querySelector("#minutes").innerHTML = finalTime;
 
             //closeicon on modal
             closeModal();
         }
     };
-    var playAgain = document.querySelector(".play-again")
-    var closeIcon = document.querySelector('.close');
+
     // @description close icon on modal
     var closeModal = function () {
 
@@ -187,7 +184,6 @@ var AppController = (function (UICtrl) {
         setUpEventListener();
         cards = UICtrl.shuffle(cards);
 
-
         //1. Clear all cards in the deck
         deck.innerHTML = "";
 
@@ -197,7 +193,6 @@ var AppController = (function (UICtrl) {
             card.classList.remove("show", "open", "match", "disabled")
         })
 
-
         //3. Reset move
         moves = 0;
         document.querySelector("#moves").textContent = moves;
@@ -206,8 +201,6 @@ var AppController = (function (UICtrl) {
         Array.prototype.forEach.call(stars, function (star) {
             star.style.visibility = 'visible'
         })
-
-
         //5. Reset timmer
         document.querySelector(".stop-watch").textContent = "";
         clearInterval(Timer)

@@ -5,10 +5,11 @@
 }
 html,
 body {
-  font-size: 18px;
+  font-size: 14px;
   font-family: "Gloria Hallelujah";
   font-weight: 400;
   line-height: 2;
+  background-color: #dfeaec;
 }
 .container {
   width: 80%;
@@ -21,10 +22,10 @@ h2 {
   text-transform: capitalize;
 }
 h1 {
-  font-size: 300%;
+  font-size: 200%;
 }
 h2 {
-  font-size: 250%;
+  font-size: 150%;
 }
 li {
   list-style: none;
@@ -33,9 +34,7 @@ span {
   font-weight: bold;
 }
 /* ------------------- Main-header ---------------- */
-.status-panel {
-  padding-top: 40px;
-}
+
 .move-count,
 .main-header ul,
 .main-header .stars li,
@@ -62,18 +61,23 @@ span {
   background-color: #a4b0be;
   padding: 1rem;
   margin-bottom: 3rem;
+  background-image: url(./img/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
 }
 .deck li.card {
   background-color: #c4e538;
-  width: 125px;
-  height: 125px;
+  width: 3.7rem;
+  height: 3.7rem;
   margin: 0.5rem 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: black;
+  background: #403232;
   border-radius: 10px;
   box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  font-size: 0;
 }
 .deck .card.open {
   animation-name: flipInY;
@@ -104,10 +108,11 @@ span {
   background-color: tomato;
   animation-name: pulse;
 }
+.status-panel {
+  padding-top: 20px;
+}
 
-/*
- * Styles for congratulations modal
- */
+/* ------------------Pop Up panel----------------------- */
 
 .overlay {
   position: fixed;
@@ -165,9 +170,10 @@ span {
   text-align: center;
 }
 
-.show {
+.deck li.show {
   visibility: visible;
   opacity: 100;
+  font-size: 150%;
 }
 .popup li {
   display: inline-block;
@@ -214,24 +220,31 @@ span {
     transform: scale3d(1, 1, 1);
   }
 }
-@media (min-width: 1025px) {
-  .container {
-		font-size: 22px;
-	}
 
-	.deck {
-		width: 660px;
+/*------------------------------- Media Queries -----------------*/
+@media (min-width: 1025px) {
+  html,
+  body {
+    font-size: 18px;
+  }
+  .container {
+    font-size: 22px;
+  }
+  .deck {
+    width: 660px;
     height: 680px;
     margin: 3rem auto;
-	}
+  }
+  .status-panel {
+    padding-top: 40px;
+  }
 
-	.deck .card {
-		height: 125px;
-		width: 125px;
-	}
+  .deck li.card {
+    height: 125px;
+    width: 125px;
+  }
 
-	.popup {
-		width: 60%;
-	}
-}
+  .popup {
+    width: 60%;
+  }
 }
